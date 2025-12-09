@@ -3,7 +3,7 @@ repo: rcm-dev-status
 
 sites:
   - name: Frontend (dev)
-    url: https://dev.basekey.ai/readyz
+    url: https://dev.basekey.ai/api/health
     method: GET
   - name: Orchestrator (dev)
     url: https://dev.basekey.ai/orchestrator/readyz
@@ -12,7 +12,7 @@ sites:
     url: https://dev.basekey.ai/rcm-web-agent/readyz
     method: GET
   - name: Memory (dev)
-    url: https://dev.basekey.ai/api/memory/readyz
+    url: https://dev.basekey.ai/api/memory/health
     method: GET
 
 status-website:
@@ -20,7 +20,7 @@ status-website:
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: RCM Dev Status
   introTitle: "**RCM Dev Status** — readiness signals for dev.basekey.ai"
-  introMessage: Public /readyz probes for the dev frontend, orchestrator, web-agent, and memory services. Payloads are sanitized for public sharing, and incidents/uptime history update automatically from GitHub Actions.
+  introMessage: Public /health(/readyz) probes for the dev frontend, orchestrator, web-agent, and memory services. Frontend/memory will move to redacted `/readyz` once deployed; incidents/uptime history update automatically from GitHub Actions.
   navbar:
     - title: Status
       href: /

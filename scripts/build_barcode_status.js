@@ -24,9 +24,9 @@ const statusClass = (uptime) => {
 };
 
 const statusLabel = (status) => {
-  if (status === "up") return "UP";
-  if (status === "down") return "DOWN";
-  return "DEGRADED";
+  if (status === "up") return "Operational";
+  if (status === "down") return "Outage";
+  return "Degraded";
 };
 
 const loadSummary = () => {
@@ -35,19 +35,27 @@ const loadSummary = () => {
 };
 
 const renderService = (service) => {
-  const uptimeDay = percentToNumber(service.uptimeDay);
-  const uptimeWeek = percentToNumber(service.uptimeWeek);
+  const uptimeYear = percentToNumber(service.uptimeYear || service.uptime);
   const uptimeMonth = percentToNumber(service.uptimeMonth);
-  const uptimeYear = percentToNumber(service.uptimeYear);
+  const uptimeWeek = percentToNumber(service.uptimeWeek);
+  const uptimeDay = percentToNumber(service.uptimeDay);
 
-  const bars = [
-    { label: "24h", value: uptimeDay },
-    { label: "7d", value: uptimeWeek },
-    { label: "30d", value: uptimeMonth },
-    { label: "365d", value: uptimeYear },
+  const overall = uptimeYear || uptimeMonth || uptimeWeek || uptimeDay;
+  const totalSegments = 120;
+  const downSegments = Math.round((100 - overall) / 100 * totalSegments);
+  const warnSegments = Math.max(0, Math.min(downSegments, Math.ceil(downSegments / 2)));
+  const okSegments = Math.max(0, totalSegments - downSegments);
+
+  const stripePalette = [
+    ...Array(okSegments).fill("ok"),
+    ...Array(warnSegments).fill("warn"),
+    ...Array(Math.max(0, downSegments - warnSegments)).fill("down"),
   ];
 
-  const currentClass = statusClass(uptimeDay);
+  // Shuffle slightly so bars look mixed
+  stripePalette.sort(() => Math.random() - 0.5);
+
+  const currentClass = statusClass(overall);
   const pill = statusLabel(service.status);
 
   return `
@@ -56,20 +64,19 @@ const renderService = (service) => {
         <div class="title">${service.name}</div>
         <div class="pill ${currentClass}">${pill}</div>
       </div>
-      <div class="barcode">
-        ${bars
-          .map(
-            (bar) => `
-          <div class="segment ${statusClass(bar.value)}">
-            <div class="segment-label">${bar.label}</div>
-            <div class="segment-value">${bar.value.toFixed(2)}%</div>
-          </div>`
-          )
-          .join("")}
-      </div>
-      <div class="meta">
-        <span class="target">${service.url}</span>
-        <span class="uptime">All-time: ${service.uptime}</span>
+      <div class="bar-row">
+        <div class="service-meta">
+          <div class="name">${service.name}</div>
+          <div class="url">${service.url}</div>
+        </div>
+        <div class="barcode">
+          ${stripePalette
+            .map(
+              (cls) => `<span class="tick ${cls}" aria-hidden="true"></span>`
+            )
+            .join("")}
+        </div>
+        <div class="uptime">${(overall || 0).toFixed(2)}% uptime</div>
       </div>
     </section>
   `;
@@ -117,17 +124,16 @@ const buildPage = (services) => {
       max-width: 720px;
     }
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
     .card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(12,102,228,0.03));
-      border: 1px solid rgba(255,255,255,0.05);
+      background: #0f1828;
+      border: 1px solid rgba(255,255,255,0.06);
       border-radius: var(--radius);
-      padding: 16px 16px 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      backdrop-filter: blur(4px);
+      padding: 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
     }
     .card-header {
       display: flex;
@@ -137,7 +143,7 @@ const buildPage = (services) => {
     }
     .title {
       font-weight: 700;
-      font-size: 16px;
+      font-size: 18px;
       letter-spacing: -0.2px;
     }
     .pill {
@@ -149,70 +155,65 @@ const buildPage = (services) => {
       border: 1px solid rgba(255,255,255,0.08);
       text-transform: uppercase;
     }
-    .pill.ok { background: rgba(12,102,228,0.15); color: #9ac5ff; }
-    .pill.warn { background: rgba(245,167,0,0.18); color: #ffd167; }
-    .pill.down { background: rgba(239,68,68,0.2); color: #ff9f9f; }
-    .barcode {
+    .pill.ok { background: rgba(12,102,228,0.18); color: #b8d7ff; }
+    .pill.warn { background: rgba(245,167,0,0.2); color: #ffe08a; }
+    .pill.down { background: rgba(239,68,68,0.2); color: #ffb1b1; }
+    .bar-row {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-    .segment {
-      height: var(--bar-height);
-      border-radius: 12px;
-      position: relative;
-      padding: 10px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .segment:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.9;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-    .segment.ok { background: repeating-linear-gradient(90deg, #0c66e4 0 10px, #0b5bc6 10px 16px); }
-    .segment.warn { background: repeating-linear-gradient(90deg, #f5a700 0 10px, #e89400 10px 16px); }
-    .segment.down { background: repeating-linear-gradient(90deg, #ef4444 0 10px, #c81e1e 10px 16px); }
-    .segment-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: rgba(255,255,255,0.78);
-    }
-    .segment-value {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-      color: #f7fbff;
-    }
-    .meta {
-      margin-top: 10px;
-      display: flex;
+      grid-template-columns: auto 1fr auto;
       gap: 12px;
-      flex-wrap: wrap;
+      align-items: center;
+    }
+    .service-meta {
+      min-width: 200px;
+    }
+    .name {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .url {
       font-size: 12px;
       color: var(--muted);
-    }
-    .meta .target {
-      color: #bcd6f3;
       word-break: break-all;
     }
-    @media (max-width: 680px) {
-      body { padding: 24px 16px 40px; }
-      .barcode { grid-template-columns: repeat(2, 1fr); }
-      .segment { height: 64px; }
+    .barcode {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 8px;
+      gap: 4px;
+      align-items: center;
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .tick {
+      width: 8px;
+      height: 28px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .tick.ok { background: #1abf78; }
+    .tick.warn { background: #f5a700; }
+    .tick.down { background: #ef4444; }
+    .uptime {
+      font-weight: 700;
+      font-size: 14px;
+      color: #d9e6f7;
+      white-space: nowrap;
+    }
+    @media (max-width: 900px) {
+      .bar-row { grid-template-columns: 1fr; }
+      .service-meta { min-width: auto; }
+      .uptime { justify-self: flex-start; }
+      .barcode { grid-auto-columns: 10px; }
     }
   </style>
 </head>
 <body>
   <h1>RCM Dev Status</h1>
-  <p class="lede">Barcode-style view of our dev stack readiness. Stripes show uptime across 24h, 7d, 30d, and 365d snapshots for each service.</p>
+  <p class="lede">Barcode-style snapshot of dev stack readiness. Stripes show aggregate uptime mix; labels read from live Upptime checks.</p>
   <div class="grid">
     ${services.map(renderService).join("")}
   </div>

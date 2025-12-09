@@ -59,18 +59,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "memory-dev",
     "status": "up",
-    "uptime": "0.49%",
-    "uptimeDay": "0.49%",
-    "uptimeWeek": "0.49%",
-    "uptimeMonth": "0.49%",
-    "uptimeYear": "0.49%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 21,
     "timeDay": 21,
     "timeWeek": 21,
     "timeMonth": 21,
     "timeYear": 21,
-    "dailyMinutesDown": {
-      "2025-12-09": 11
-    }
+    "dailyMinutesDown": {}
   }
 ]

@@ -1,7 +1,7 @@
 url: https://dev.basekey.ai/api/memory/readyz
-status: up
-code: 200
+status: down
+code: 502
 responseTime: 69
-lastUpdated: 2026-01-01T23:07:05.308Z
+lastUpdated: 2026-01-02T08:12:39.832Z
 startTime: 2025-12-09T19:49:09.542Z
 generator: Upptime <https://github.com/upptime/upptime>

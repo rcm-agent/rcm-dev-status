@@ -1,7 +1,7 @@
 url: https://dev.basekey.ai/readyz
-status: down
-code: 503
-responseTime: 130
-lastUpdated: 2026-02-04T03:07:26.563Z
+status: up
+code: 200
+responseTime: 5435
+lastUpdated: 2026-02-04T04:39:38.159Z
 startTime: 2025-12-09T19:49:07.285Z
 generator: Upptime <https://github.com/upptime/upptime>

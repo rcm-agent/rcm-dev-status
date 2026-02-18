@@ -6,9 +6,9 @@
     "slug": "frontend-dev",
     "status": "up",
     "uptime": "88.23%",
-    "uptimeDay": "98.99%",
-    "uptimeWeek": "96.52%",
-    "uptimeMonth": "84.58%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "96.67%",
+    "uptimeMonth": "84.62%",
     "uptimeYear": "88.23%",
     "time": 2632,
     "timeDay": 16081,
@@ -16,7 +16,6 @@
     "timeMonth": 3883,
     "timeYear": 2632,
     "dailyMinutesDown": {
-      "2026-02-17": 15,
       "2026-02-16": 48,
       "2026-02-14": 68,
       "2026-02-13": 98,
@@ -56,7 +55,8 @@
       "2025-12-21": 547,
       "2025-12-20": 21,
       "2025-12-19": 34,
-      "2025-12-14": 21
+      "2025-12-14": 21,
+      "2025-12-13": 24
     }
   },
   {
@@ -106,11 +106,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "web-agent-dev",
     "status": "up",
-    "uptime": "75.68%",
+    "uptime": "75.69%",
     "uptimeDay": "90.39%",
     "uptimeWeek": "88.07%",
     "uptimeMonth": "96.16%",
-    "uptimeYear": "75.68%",
+    "uptimeYear": "75.69%",
     "time": 320,
     "timeDay": 64,
     "timeWeek": 167,

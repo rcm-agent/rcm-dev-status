@@ -4,12 +4,12 @@
     "url": "https://dev.basekey.ai/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "frontend-dev",
-    "status": "up",
-    "uptime": "88.16%",
-    "uptimeDay": "86.23%",
+    "status": "down",
+    "uptime": "88.18%",
+    "uptimeDay": "86.22%",
     "uptimeWeek": "94.70%",
     "uptimeMonth": "84.16%",
-    "uptimeYear": "88.16%",
+    "uptimeYear": "88.18%",
     "time": 2856,
     "timeDay": 19753,
     "timeWeek": 12650,
@@ -54,8 +54,7 @@
       "2025-12-24": 55,
       "2025-12-22": 494,
       "2025-12-21": 547,
-      "2025-12-20": 21,
-      "2025-12-19": 17
+      "2025-12-20": 21
     }
   },
   {

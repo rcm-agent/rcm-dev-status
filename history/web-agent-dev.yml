@@ -1,7 +1,7 @@
 url: https://dev.basekey.ai/rcm-web-agent/readyz
-status: up
-code: 200
-responseTime: 3200
-lastUpdated: 2026-03-18T18:36:25.673Z
+status: down
+code: 503
+responseTime: 7
+lastUpdated: 2026-03-18T19:27:32.791Z
 startTime: 2025-12-09T19:49:08.993Z
 generator: Upptime <https://github.com/upptime/upptime>

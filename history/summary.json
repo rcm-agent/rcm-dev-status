@@ -4,17 +4,17 @@
     "url": "https://dev.basekey.ai/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "frontend-dev",
-    "status": "up",
-    "uptime": "87.32%",
-    "uptimeDay": "98.45%",
+    "status": "down",
+    "uptime": "87.34%",
+    "uptimeDay": "98.44%",
     "uptimeWeek": "87.57%",
     "uptimeMonth": "60.31%",
-    "uptimeYear": "87.32%",
-    "time": 5196,
-    "timeDay": 519,
-    "timeWeek": 3219,
-    "timeMonth": 8519,
-    "timeYear": 5196,
+    "uptimeYear": "87.34%",
+    "time": 5190,
+    "timeDay": 820,
+    "timeWeek": 3141,
+    "timeMonth": 8467,
+    "timeYear": 5190,
     "dailyMinutesDown": {
       "2026-04-02": 22,
       "2026-03-28": 214,
@@ -60,7 +60,7 @@
       "2026-02-03": 252,
       "2026-02-02": 181,
       "2026-02-01": 136,
-      "2026-01-31": 160
+      "2026-01-31": 127
     }
   },
   {
@@ -130,7 +130,7 @@
     "time": 1184,
     "timeDay": 222,
     "timeWeek": 2801,
-    "timeMonth": 2082,
+    "timeMonth": 2089,
     "timeYear": 1184,
     "dailyMinutesDown": {
       "2026-04-02": 25,

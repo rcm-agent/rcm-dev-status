@@ -127,17 +127,17 @@
     "url": "https://dev.basekey.ai/rcm-web-agent/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "web-agent-dev",
-    "status": "up",
-    "uptime": "95.25%",
-    "uptimeDay": "64.37%",
+    "status": "down",
+    "uptime": "95.28%",
+    "uptimeDay": "64.36%",
     "uptimeWeek": "90.40%",
-    "uptimeMonth": "81.12%",
-    "uptimeYear": "95.25%",
-    "time": 1212,
-    "timeDay": 3395,
-    "timeWeek": 1723,
-    "timeMonth": 2466,
-    "timeYear": 1212,
+    "uptimeMonth": "81.24%",
+    "uptimeYear": "95.28%",
+    "time": 1211,
+    "timeDay": 3200,
+    "timeWeek": 1688,
+    "timeMonth": 2458,
+    "timeYear": 1211,
     "dailyMinutesDown": {
       "2026-04-09": 439,
       "2026-04-08": 111,
@@ -163,7 +163,7 @@
       "2026-03-14": 753,
       "2026-03-13": 597,
       "2026-03-12": 750,
-      "2026-03-11": 74
+      "2026-03-11": 22
     }
   },
   {

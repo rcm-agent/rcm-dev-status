@@ -1,7 +1,7 @@
 url: https://dev.basekey.ai/orchestrator/readyz
-status: up
-code: 200
-responseTime: 213
-lastUpdated: 2026-04-11T04:57:06.013Z
+status: down
+code: 503
+responseTime: 177
+lastUpdated: 2026-04-11T05:32:58.316Z
 startTime: 2025-12-09T19:49:08.137Z
 generator: Upptime <https://github.com/upptime/upptime>

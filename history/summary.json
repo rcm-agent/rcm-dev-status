@@ -6,9 +6,9 @@
     "slug": "frontend-dev",
     "status": "up",
     "uptime": "90.68%",
-    "uptimeDay": "97.09%",
-    "uptimeWeek": "99.58%",
-    "uptimeMonth": "97.85%",
+    "uptimeDay": "97.77%",
+    "uptimeWeek": "99.68%",
+    "uptimeMonth": "97.87%",
     "uptimeYear": "90.68%",
     "time": 4506,
     "timeDay": 298,
@@ -16,7 +16,7 @@
     "timeMonth": 335,
     "timeYear": 4506,
     "dailyMinutesDown": {
-      "2026-05-10": 42,
+      "2026-05-10": 32,
       "2026-04-30": 117,
       "2026-04-29": 546,
       "2026-04-26": 109,
@@ -62,7 +62,8 @@
       "2026-02-13": 98,
       "2026-02-12": 85,
       "2026-02-11": 36,
-      "2026-02-09": 200
+      "2026-02-09": 200,
+      "2026-02-08": 24
     }
   },
   {
@@ -71,15 +72,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "orchestrator-dev",
     "status": "up",
-    "uptime": "93.85%",
+    "uptime": "93.86%",
     "uptimeDay": "92.31%",
     "uptimeWeek": "97.58%",
-    "uptimeMonth": "90.86%",
-    "uptimeYear": "93.85%",
+    "uptimeMonth": "90.90%",
+    "uptimeYear": "93.86%",
     "time": 696,
     "timeDay": 636,
     "timeWeek": 408,
-    "timeMonth": 435,
+    "timeMonth": 438,
     "timeYear": 696,
     "dailyMinutesDown": {
       "2026-05-10": 111,

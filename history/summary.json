@@ -4,19 +4,19 @@
     "url": "https://dev.basekey.ai/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "frontend-dev",
-    "status": "down",
-    "uptime": "92.20%",
-    "uptimeDay": "97.96%",
-    "uptimeWeek": "99.29%",
-    "uptimeMonth": "98.63%",
-    "uptimeYear": "92.20%",
-    "time": 4220,
-    "timeDay": 110,
-    "timeWeek": 356,
-    "timeMonth": 328,
-    "timeYear": 4220,
+    "status": "up",
+    "uptime": "92.22%",
+    "uptimeDay": "96.74%",
+    "uptimeWeek": "98.98%",
+    "uptimeMonth": "98.56%",
+    "uptimeYear": "92.22%",
+    "time": 4214,
+    "timeDay": 123,
+    "timeWeek": 335,
+    "timeMonth": 327,
+    "timeYear": 4214,
     "dailyMinutesDown": {
-      "2026-02-18": 391,
+      "2026-02-18": 330,
       "2026-02-19": 21,
       "2026-02-20": 118,
       "2026-02-21": 22,
@@ -62,7 +62,8 @@
       "2026-05-17": 82,
       "2026-05-19": 249,
       "2026-06-02": 39,
-      "2026-06-08": 72
+      "2026-06-08": 72,
+      "2026-06-09": 31
     }
   },
   {
@@ -79,7 +80,7 @@
     "time": 653,
     "timeDay": 404,
     "timeWeek": 310,
-    "timeMonth": 348,
+    "timeMonth": 346,
     "timeYear": 653,
     "dailyMinutesDown": {
       "2025-12-11": 39,
@@ -155,7 +156,7 @@
     "time": 1114,
     "timeDay": 581,
     "timeWeek": 519,
-    "timeMonth": 897,
+    "timeMonth": 915,
     "timeYear": 1114,
     "dailyMinutesDown": {
       "2026-03-15": 249,
@@ -210,7 +211,7 @@
     "time": 536,
     "timeDay": 205,
     "timeWeek": 178,
-    "timeMonth": 175,
+    "timeMonth": 179,
     "timeYear": 536,
     "dailyMinutesDown": {
       "2025-12-09": 41,

@@ -72,16 +72,16 @@
     "url": "https://dev.basekey.ai/orchestrator/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "orchestrator-dev",
-    "status": "down",
-    "uptime": "94.73%",
-    "uptimeDay": "96.00%",
-    "uptimeWeek": "99.05%",
-    "uptimeMonth": "98.98%",
-    "uptimeYear": "94.73%",
+    "status": "up",
+    "uptime": "94.71%",
+    "uptimeDay": "92.47%",
+    "uptimeWeek": "98.55%",
+    "uptimeMonth": "98.88%",
+    "uptimeYear": "94.71%",
     "time": 649,
-    "timeDay": 264,
-    "timeWeek": 260,
-    "timeMonth": 297,
+    "timeDay": 350,
+    "timeWeek": 291,
+    "timeMonth": 309,
     "timeYear": 649,
     "dailyMinutesDown": {
       "2025-12-11": 39,
@@ -142,7 +142,7 @@
       "2026-06-02": 34,
       "2026-06-08": 38,
       "2026-06-10": 57,
-      "2026-06-11": 0
+      "2026-06-11": 51
     }
   },
   {

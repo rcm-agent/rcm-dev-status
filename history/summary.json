@@ -4,19 +4,18 @@
     "url": "https://dev.basekey.ai/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "frontend-dev",
-    "status": "up",
-    "uptime": "87.33%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "62.73%",
-    "uptimeYear": "87.33%",
+    "status": "down",
+    "uptime": "87.35%",
+    "uptimeDay": "98.98%",
+    "uptimeWeek": "99.85%",
+    "uptimeMonth": "63.86%",
+    "uptimeYear": "87.35%",
     "time": 3777,
     "timeDay": 326,
     "timeWeek": 361,
     "timeMonth": 312,
     "timeYear": 3777,
     "dailyMinutesDown": {
-      "2026-02-27": 18,
       "2026-02-28": 98,
       "2026-03-03": 36,
       "2026-03-04": 98,
@@ -81,7 +80,8 @@
       "2026-07-01": 1440,
       "2026-06-30": 1440,
       "2026-06-29": 1440,
-      "2026-06-28": 788
+      "2026-06-28": 788,
+      "2026-08-01": 15
     }
   },
   {
@@ -89,12 +89,12 @@
     "url": "https://dev.basekey.ai/orchestrator/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "orchestrator-dev",
-    "status": "up",
-    "uptime": "95.56%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "98.92%",
-    "uptimeYear": "95.56%",
+    "status": "down",
+    "uptime": "95.57%",
+    "uptimeDay": "99.31%",
+    "uptimeWeek": "99.90%",
+    "uptimeMonth": "98.90%",
+    "uptimeYear": "95.57%",
     "time": 617,
     "timeDay": 512,
     "timeWeek": 394,
@@ -164,7 +164,8 @@
       "2026-06-17": 367,
       "2026-06-24": 84,
       "2026-07-05": 317,
-      "2026-07-09": 155
+      "2026-07-09": 155,
+      "2026-08-01": 10
     }
   },
   {
@@ -172,19 +173,19 @@
     "url": "https://dev.basekey.ai/rcm-web-agent/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "web-agent-dev",
-    "status": "up",
-    "uptime": "96.22%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "96.22%",
+    "status": "down",
+    "uptime": "96.28%",
+    "uptimeDay": "99.65%",
+    "uptimeWeek": "99.95%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "96.28%",
     "time": 1058,
     "timeDay": 341,
     "timeWeek": 284,
     "timeMonth": 261,
     "timeYear": 1058,
     "dailyMinutesDown": {
-      "2026-03-16": 834,
+      "2026-03-16": 671,
       "2026-03-17": 757,
       "2026-03-18": 705,
       "2026-03-19": 668,
@@ -225,7 +226,8 @@
       "2026-06-17": 1440,
       "2026-06-16": 1440,
       "2026-06-15": 1440,
-      "2026-06-14": 658
+      "2026-06-14": 658,
+      "2026-08-01": 5
     }
   },
   {
@@ -233,9 +235,9 @@
     "url": "https://dev.basekey.ai/api/memory/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/dev.basekey.ai.ico",
     "slug": "memory-dev",
-    "status": "up",
+    "status": "down",
     "uptime": "99.27%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.98%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.27%",
@@ -274,7 +276,8 @@
       "2026-04-10": 19,
       "2026-06-02": 25,
       "2026-06-08": 28,
-      "2026-06-10": 48
+      "2026-06-10": 48,
+      "2026-08-01": 0
     }
   }
 ]
